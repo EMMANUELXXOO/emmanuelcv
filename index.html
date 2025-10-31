@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emmanuel Orona — CV</title>
+  <meta name="description" content="CV de Emmanuel Orona: Ingeniero en Sistemas, Tijuana MX. Redes, Linux, LAMP, Laravel, Moodle, Android, Google Workspace." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Emmanuel Orona — CV" />
+  <meta property="og:description" content="Ingeniero en Sistemas. Redes, Linux, LAMP, Laravel, Moodle, Android." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="avatar.jpg" /> <!-- opcional -->
+
+  <!-- Color scheme & tipografía del sistema -->
+  <style>
+    :root{
+      --bg:#0b1020;        /* fondo principal */
+      --panel:#0f172a;     /* tarjetas */
+      --ink:#e6e7ea;       /* texto */
+      --muted:#94a3b8;     /* texto suave */
+      --acc:#22d3ee;       /* acento */
+      --acc-2:#a78bfa;     /* acento 2 */
+      --border:#233047;    /* bordes */
+      --chip:#1f2a44;      /* pastillas */
+      --ok:#34d399; --warn:#f59e0b; --bad:#ef4444;
+      --maxw:1000px;
+      --radius:20px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, #182238 0%, transparent 60%),
+                  radial-gradient(1000px 600px at 110% 10%, #201a33 0%, transparent 50%), var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:auto;padding:22px}
+    header.hero{
+      position:relative;
+      margin:18px 0 22px;
+      padding:26px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:
+        linear-gradient(180deg,#0b1220, #0b1220) padding-box,
+        linear-gradient(135deg, rgba(34,211,238,.35), rgba(167,139,250,.28)) border-box;
+      box-shadow:var(--shadow);
+      display:grid;gap:18px;grid-template-columns: 86px 1fr auto; align-items:center;
+    }
+    .avatar{
+      width:86px;height:86px;border-radius:16px;object-fit:cover;
+      background:#111;border:1px solid var(--border)
+    }
+    h1{margin:0;font-size:clamp(24px,4vw,36px);letter-spacing:.3px}
+    .subtitle{color:var(--muted);margin-top:4px}
+    .quick a{display:inline-block;border:1px solid var(--border);padding:8px 12px;border-radius:12px;margin-left:10px;background:#0e1526}
+    .chip{display:inline-block;background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;margin:6px 6px 0 0;font-size:14px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+    .col-8{grid-column: span 8}
+    .col-4{grid-column: span 4}
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    h2{margin:0 0 10px;font-size:18px;letter-spacing:.2px}
+    .muted{color:var(--muted)}
+    .list{margin:0;padding:0;list-style:none}
+    .list li{margin:0 0 14px}
+    .role{display:flex;justify-content:space-between;gap:10px}
+    .role strong{font-weight:600}
+    .timeline{position:relative;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:linear-gradient(#26334d,#34486f)}
+    .t-item{position:relative;margin-bottom:14px}
+    .t-item:before{content:"";position:absolute;left:-2px;top:.45em;width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc-2));box-shadow:0 0 0 3px #0f172a}
+    .pill{font-size:12px;padding:3px 8px;border-radius:999px;border:1px solid var(--border);background:#0c1426;white-space:nowrap}
+    .stack{display:flex;flex-wrap:wrap;gap:8px}
+    .kpi{display:flex;align-items:center;gap:8px;margin:8px 0}
+    .kpi b{font-size:18px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      background:#0e1526;cursor:pointer
+    }
+    .btn:hover{filter:brightness(1.1)}
+    footer{opacity:.7;margin:22px auto;max-width:var(--maxw);text-align:center;font-size:14px}
+
+    /* Responsivo */
+    @media (max-width:900px){
+      header.hero{grid-template-columns:64px 1fr}
+      .quick{grid-column:1 / -1}
+      .col-8, .col-4{grid-column: 1 / -1}
+    }
+
+    /* Modo impresión (genera PDF bonito con Ctrl/Cmd+P) */
+    @media print{
+      body{background:white}
+      header.hero, .panel{box-shadow:none}
+      a{text-decoration:none}
+      .btn, .quick{display:none}
+    }
+  </style>
+
+  <!-- Datos estructurados (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emmanuel Orona",
+    "jobTitle": "Ingeniero en Sistemas",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tijuana", "addressRegion": "BC", "addressCountry": "MX" },
+    "email": "mailto:tu@email.com",
+    "url": "https://TU-USUARIO.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/TU-LINKEDIN",
+      "https://github.com/TU-USUARIO"
+    ],
+    "knowsAbout": ["Linux","Redes","Ubiquiti","LAMP","Laravel","Moodle","Android","Google Workspace","SQL","Git"]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero">
+      <img class="avatar" src="avatar.jpg" alt="Foto de Emmanuel" />
+      <div>
+        <h1>Emmanuel Orona</h1>
+        <div class="subtitle">Ingeniero en Sistemas · Tijuana, MX</div>
+        <div class="subtitle">
+          <a href="mailto:tu@email.com">tu@email.com</a> ·
+          <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/TU-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div style="margin-top:10px">
+          <span class="chip">Linux</span><span class="chip">Redes</span><span class="chip">Ubiquiti</span>
+          <span class="chip">LAMP</span><span class="chip">Laravel</span><span class="chip">Moodle</span>
+          <span class="chip">Android</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="quick">
+        <a class="btn" href="#" onclick="window.print()">
+          <!-- ícono print simple -->
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 9V2h12v7h-2V4H8v5H6Zm-2 2h16a2 2 0 0 1 2 2v5h-4v4H6v-4H2v-5a2 2 0 0 1 2-2Zm4 11h8v-6H8v6Zm-4-8h2v2H4v-2Zm14 0h2v2h-2v-2Z"/></svg>
+          Descargar PDF
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <section class="grid">
+      <!-- Columna principal -->
+      <div class="col-8">
+        <div class="panel">
+          <h2>Resumen</h2>
+          <p class="muted">
+            Ingeniero orientado a resultados: automatizo, securizo y optimizo. Experiencia en
+            Google Workspace, segmentación de red con Ubiquiti, servidores Linux (LAMP),
+            y desarrollo de soluciones a medida (Laravel, Android). Enfoque en confiabilidad,
+            costo-eficiencia y documentación clara.
+          </p>
+          <div class="stack">
+            <span class="pill">Disponibilidad: inmediata</span>
+            <span class="pill">Modalidad: híbrido/remoto</span>
+            <span class="pill">Inglés: en progreso (B1)</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Experiencia</h2>
+          <div class="timeline">
+            <div class="t-item">
+              <div class="role">
+                <div><strong>Auxiliar de Sistemas — Cruz Roja Mexicana · Delegación Tijuana</strong></div>
+                <div class="muted">2023 — Actual</div>
+              </div>
+              <ul class="list">
+                <li>Administración de <strong>Google Workspace</strong> (2FA, cuentas docentes/estudiantes, políticas).</li>
+                <li>Redes con <strong>Ubiquiti</strong> (VLANs, DHCP, segmentación por áreas, UDM Pro, AP U6-LR).</li>
+                <li>Servidores <strong>Linux</strong> (Ubuntu), hosting de <strong>Moodle/WordPress/Laravel</strong>, backups y monitoreo.</li>
+                <li>Soporte a impresoras multifunción (Xerox, Sharp), inventarios y <strong>documentación</strong> de procesos.</li>
+              </ul>
+              <div class="stack">
+                <span class="pill">Linux</span><span class="pill">Apache/Nginx</span><span class="pill">MySQL</span>
+                <span class="pill">PHP 8</span><span class="pill">Let’s Encrypt</span><span class="pill">VLANs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Proyectos clave</h2>
+          <ul class="list">
+            <li>
+              <strong>Portal de Convocatorias</strong> — Laravel + MySQL. Gestión de postulaciones, evaluaciones, PDF y flujos internos.
+              <div class="stack"><span class="pill">Laravel</span><span class="pill">Blade</span><span class="pill">MySQL</span></div>
+            </li>
+            <li>
+              <strong>CronoQuirofano (Android)</strong> — Timers clínicos (RCP, fármacos), registros offline con Room y dashboard.
+              <div class="stack"><span class="pill">Android</span><span class="pill">Java</span><span class="pill">Room</span></div>
+            </li>
+            <li>
+              <strong>Moodle 5.1</strong> — Theming, plugins, provisión de usuarios y certificados personalizados.
+              <div class="stack"><span class="pill">Moodle</span><span class="pill">PHP</span><span class="pill">Postfix</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Logros y métricas</h2>
+          <div class="kpi"><span class="pill">Infra</span> <b>↓40%</b> en incidencias de red tras segmentación VLAN.</div>
+          <div class="kpi"><span class="pill">Moodle</span> <b>+99.9%</b> de uptime en periodo de exámenes.</div>
+          <div class="kpi"><span class="pill">Automatización</span> <b>–60 min</b> por alta de grupos gracias a scripts.</div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="col-4">
+        <div class="panel">
+          <h2>Habilidades</h2>
+          <div class="stack">
+            <span class="chip">Linux</span><span class="chip">Bash</span><span class="chip">Docker básico</span>
+            <span class="chip">Apache/Nginx</span><span class="chip">MySQL</span><span class="chip">PHP 8</span>
+            <span class="chip">Laravel</span><span class="chip">Android</span><span class="chip">Git/GitHub</span>
+            <span class="chip">Ubiquiti</span><span class="chip">Moodle</span><span class="chip">Google Workspace</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Educación</h2>
+          <ul class="list">
+            <li><strong>Instituto Tecnológico de Tijuana</strong> — Ing. en Sistemas Computacionales.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Certificaciones / Cursos</h2>
+          <ul class="list">
+            <li>Google Workspace Admin (en curso).</li>
+            <li>Linux Server Administration (autoformación continua).</li>
+            <li>Networking con Ubiquiti (
